@@ -1,14 +1,23 @@
 import React from "react";
 
-const Form = ({ setInputText }) => {
+const Form = ({ setInputText, todos, setTodos, inputText }) => {
 
     const inputTextHandler = (e) => {
         setInputText(e.target.value);
     };
+
+    const sumbitTodoHandler = (e) => {
+        e.preventDefault();
+        setTodos([
+            ...todos, {text: inputText, completed: false, id: todos.length}
+        ])
+        setInputText('');
+    };
+
     return (
         <form>
-            <input onChange={inputTextHandler} type="text" className="todo-input" />
-            <button className="todo-button" type="submit">
+            <input onChange={inputTextHandler} type="text" value={inputText} className="todo-input" />
+            <button onClick={sumbitTodoHandler} className="todo-button" type="submit">
                 <i className="fas fa-plus-square"></i>
             </button>
             <div className="select">

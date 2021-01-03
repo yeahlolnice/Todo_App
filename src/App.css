@@ -37,6 +37,13 @@ form button:hover {
   background: #ff6f47;
   color: white;
 }
+.warning {
+  text-align: center;
+  display: none;
+}
+.show-warning{
+  display: initial;
+}
 .todo-container {
   display: flex;
   justify-content: center;

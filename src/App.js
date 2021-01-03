@@ -56,6 +56,7 @@ function App() {
       <header>
         <h1>Todo List</h1>
       </header>
+      <div className="warning"><p>Try to write something first</p></div>
       <Form 
       inputText={inputText} 
       todos={todos} 

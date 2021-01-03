@@ -1,3 +1,4 @@
+
 import React from "react";
 
 const Form = ({ setInputText, todos, setTodos, inputText, setStatus }) => {
@@ -8,10 +9,14 @@ const Form = ({ setInputText, todos, setTodos, inputText, setStatus }) => {
 
     const sumbitTodoHandler = (e) => {
         e.preventDefault();
-        setTodos([
-            ...todos, {text: inputText, completed: false, id: todos.length}
-        ])
-        setInputText('');
+        if ( inputText === "") {
+           document.querySelector(".warning").classList.add(".show-warning");
+        }else {
+            setTodos([
+                ...todos, {text: inputText, completed: false, id: todos.length}
+            ])
+            setInputText('');
+        }
     };
 
     const statusHandler = (e) => {

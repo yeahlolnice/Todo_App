@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 body {
-  background-image: linear-gradient(120deg, #C2A878 0%, #D3C09C 100%);
+  background-image: linear-gradient(120deg, #5851da 0%, #724bdf 100%);
   color: white;
   font-family: "Poppins", sans-serif;
   min-height: 100vh;
@@ -58,6 +58,7 @@ form button:hover {
   align-items: center;
   transition: all 1s ease;
   list-style: none;
+  transition: 0.5s;
   
 }
 .filter-todo {
@@ -134,9 +135,10 @@ select {
   cursor: pointer;
   pointer-events: none;
 }
-/* Transition */
-/*
-.select:hover::after {
-  transform: scale(1.5);
+/* Transition */ 
+.deletedTodo {
+  transition: 3s;
+  width: 100%;
+  opacity: 0;
 }
-*/
+
